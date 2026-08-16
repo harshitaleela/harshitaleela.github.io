@@ -95,27 +95,20 @@
 
     <section id="research" class="section">
       <div class="container">
-        <h2 class="section-title">Research Interests</h2>
+        <h2 class="section-title">Past &amp; Ongoing Research</h2>
 
         <div class="card">
-          <h3>Model Checking &amp; Formal Verification</h3>
-          <p class="muted">Interest developed under Prof. Gene Cooperman, Northeastern University</p>
-          <p>
-            My work on model checking taught me how different CPU schedules produce non-deterministic
-            behaviour in concurrent programs, and sparked a lasting interest in formal verification
-            of concurrent and distributed systems. I plan to bring this correctness-focused mindset
-            to the systems I build.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Livelock Detection in Concurrent Programs</h3>
-          <p class="muted">McMini project &mdash; Prof. Gene Cooperman, Northeastern University</p>
+          <h3>Livelock Detection Using Cycle Decomposition in a Model Checker</h3>
+          <p class="muted">With Aayushi Gautam and Prof. Gene Cooperman, Northeastern University</p>
           <ul>
-            <li>Designed and implemented a heuristic to detect potential livelocks in multithreaded programs by searching for livelock-like cycles within a process's execution trace under a round-robin schedule.</li>
-            <li>Integrated the detector into the McMini model checker, surfacing executions that make no progress toward completion.</li>
+            <li>Proposed <strong>Algorithm A</strong>, a livelock detection algorithm built on the McMini in-situ stateless model checker, addressing liveness violations — executions in which threads continue to run but make no progress, leaving no bad state as evidence.</li>
+            <li>Introduced <strong>cycle decomposition</strong>: partition livelocked threads into small, independent subsets, each cycling without progress, to produce short, interpretable per-cycle witnesses instead of one long entangled trace.</li>
+            <li>Use <strong>visible-object sharing</strong> (mutexes, semaphores, condition variables, shared variables) as a sound runtime over-approximation of the happens-before relation to identify interacting threads without building the full state space.</li>
+            <li>Explores a single bounded execution suffix per round, avoiding exhaustive schedule enumeration and cross-schedule state caching (in contrast to Lasso detection).</li>
+            <li>Established a <strong>soundness proof</strong>: if the algorithm reports livelock at state S<sub>0</sub>, no infinite execution from S<sub>0</sub> contains a user-declared progress transition (under three stated assumptions, including <code>MC_PROGRESS()</code> annotations).</li>
+            <li>Detects common livelock patterns such as busy-waiting and ping-pong exchanges; explicitly characterizes completeness boundaries (determinism restriction, potential false positives under non-deterministic <code>sem_post()</code>).</li>
           </ul>
-          <p><a href="https://www.ccs.neu.edu/home/gene/harshita-livelock-paper.pdf" target="_blank" rel="noopener">Paper draft: Livelock Detection in Concurrent Programs &rarr;</a></p>
+          <p><a href="https://www.ccs.neu.edu/home/gene/harshita-livelock-paper.pdf" target="_blank" rel="noopener">Paper draft (PDF) &rarr;</a></p>
         </div>
 
         <div class="card">
