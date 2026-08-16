@@ -88,43 +88,15 @@
 
         <article class="research-item">
           <header class="research-head">
-            <h3>Livelock Detection Using Cycle Decomposition in a Model Checker</h3>
+            <h3>Livelock Detection in a Model Checker</h3>
             <p class="muted">Harshita Lila &middot; Aayushi Gautam &middot; Gene Cooperman</p>
             <p class="muted">McMini &middot; Independent Research</p>
           </header>
           <p>
-            I developed a livelock-detection heuristic for McMini, an in-situ stateless model checker
-            for concurrent programs. The approach targets executions in which threads continue to
-            execute but collectively fail to make meaningful progress.
+            Developed a livelock-detection approach for McMini, an in-situ stateless model checker
+            for concurrent programs. The work investigates how cyclic non-progress behavior can be
+            identified from bounded executions and provides interpretable livelock witnesses.
           </p>
-          <ul class="research-points">
-            <li>Developed a cycle-decomposition approach for identifying interacting groups of threads involved in livelock.</li>
-            <li>Used visible-object sharing, including mutexes, semaphores, condition variables, and shared variables, as a runtime approximation for thread interaction.</li>
-            <li>Designed the approach to analyze bounded execution suffixes rather than exhaustively enumerate schedules.</li>
-            <li>Produced shorter and more interpretable livelock witnesses.</li>
-            <li>Established soundness conditions under explicit assumptions and characterized limitations involving nondeterminism and progress annotations.</li>
-          </ul>
-          <p class="tags"><span class="tag">Model Checking</span><span class="tag">Concurrency</span><span class="tag">Formal Verification</span><span class="tag">Livelock</span></p>
-
-          <details class="read-more">
-            <summary>Technical details</summary>
-            <p>
-              In an in-situ stateless model checker such as McMini, analysis is performed using
-              information available from the current execution branch rather than a globally cached
-              state space. The approach therefore approximates potential thread interaction using
-              visible-object sharing: two transitions are considered related when they access a common
-              visible object such as a mutex, semaphore, condition variable, or shared variable. This
-              provides a conservative approximation of potential interaction between threads without
-              requiring exhaustive exploration of alternative schedules.
-            </p>
-            <p>
-              The algorithm decomposes threads into groups based on their observed interactions and
-              searches each group for state recurrence within a bounded execution suffix. It avoids
-              exhaustive enumeration of schedules and does not require cross-schedule state caching.
-              The result is a compact livelock witness that isolates the threads and execution cycle
-              associated with the suspected non-progress behavior.
-            </p>
-          </details>
         </article>
 
         <article class="research-item">
@@ -166,7 +138,7 @@
         <div class="outputs">
           <div class="output-item">
             <ul>
-              <li>Livelock Detection Using Cycle Decomposition in a Model Checker</li>
+              <li>Livelock Detection in a Model Checker</li>
               <li>McMini Model-Checker Contributions</li>
             </ul>
           </div>
@@ -261,9 +233,9 @@
         <h2 class="section-title">Education</h2>
         <div class="edu-card">
           <div class="edu-body">
-            <h3>Ph.D. in Computer Science</h3>
-            <p class="muted">University of Utah, School of Computing, 2026&ndash;Present</p>
-            <p class="muted">Ph.D. Advisor: Prof. Fuheng Zhao</p>
+            <h3>Ph.D. student in Computer Science</h3>
+            <p class="muted">University of Utah, Kahlert School of Computing, 2026&ndash;Present</p>
+            <p class="muted">Advisor: Prof. Fuheng Zhao</p>
           </div>
         </div>
         <div class="edu-card">
