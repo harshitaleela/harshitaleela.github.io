@@ -49,9 +49,10 @@
           will be joining the group of Prof. Fuheng Zhao in the UtahDB lab. I will be working on
           semantic operations and NL2SQL — integrating large language models into database systems
           through semantic operators such as NL2SQL translation, semantic filters, and reasoning
-          joins, so that data becomes accessible through natural language interfaces. My work will
-          also build on model checking and formal verification of concurrent programs, developed
-          through my experience on the McMini model checker.
+          joins, so that data becomes accessible through natural language interfaces. I am also
+          deeply interested in model checking and formal verification of concurrent programs — an
+          interest developed while building the livelock-detection heuristic in the McMini model
+          checker.
         </p>
         <p>
           Before graduate school, I worked under <strong>Prof. Gene Cooperman</strong> at
@@ -94,22 +95,41 @@
 
     <section id="research" class="section">
       <div class="container">
-        <h2 class="section-title">Research</h2>
+        <h2 class="section-title">Research Interests</h2>
+
+        <div class="card">
+          <h3>Model Checking &amp; Formal Verification</h3>
+          <p class="muted">Interest developed under Prof. Gene Cooperman, Northeastern University</p>
+          <p>
+            My work on model checking taught me how different CPU schedules produce non-deterministic
+            behaviour in concurrent programs, and sparked a lasting interest in formal verification
+            of concurrent and distributed systems. I plan to bring this correctness-focused mindset
+            to the systems I build.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Livelock Detection in Concurrent Programs</h3>
+          <p class="muted">McMini project &mdash; Prof. Gene Cooperman, Northeastern University</p>
+          <ul>
+            <li>Designed and implemented a heuristic to detect potential livelocks in multithreaded programs by searching for livelock-like cycles within a process's execution trace under a round-robin schedule.</li>
+            <li>Integrated the detector into the McMini model checker, surfacing executions that make no progress toward completion.</li>
+          </ul>
+          <p><a href="https://www.ccs.neu.edu/home/gene/harshita-livelock-paper.pdf" target="_blank" rel="noopener">Paper draft: Livelock Detection in Concurrent Programs &rarr;</a></p>
+        </div>
 
         <div class="card">
           <h3>McMini: DPOR-based Model Checker</h3>
-          <p class="muted">Under Prof. Gene Cooperman, Northeastern University</p>
+          <p class="muted">Open-source contribution &mdash; Prof. Gene Cooperman, Northeastern University</p>
           <ul>
-            <li>Researched livelock detection heuristics — detecting potential livelocks by looking for livelock-like cycles within a process's execution trace under a round-robin schedule.</li>
             <li>Developed an LLVM instrumentation plugin to intercept accesses to global variables, wrapping them with runtime checks to detect non-deterministic reads and writes (data races).</li>
             <li>Implemented command-line flags to make the software easier to use.</li>
           </ul>
         </div>
 
         <p class="note">
-          My work on model checking taught me how different CPU schedules produce non-deterministic
-          behaviour in concurrent programs. I am excited to apply this systems mindset to building
-          scalable, correct, and human-centered data systems.
+          I am excited to apply this model-checking mindset to building scalable, correct, and
+          human-centered data systems.
         </p>
       </div>
     </section>
