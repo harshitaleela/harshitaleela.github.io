@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshita Lila — CS PhD Student, University of Utah</title>
+  <meta name="description" content="Portfolio of Harshita Lila, PhD student in Computer Science at the University of Utah, advised by Prof. Fuheng Zhao." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">Harshita&nbsp;Lila</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="container">
+      <h1 class="name">Harshita Lila</h1>
+      <p class="tagline">Ph.D. Student in Computer Science — University of Utah</p>
+      <p class="advisor">Advised by <a href="https://www.cs.utah.edu/~fzhao/" target="_blank" rel="noopener">Prof. Fuheng Zhao</a></p>
+      <p class="research-focus">
+        Systems programming &bull; model checking &bull; formal verification &bull; robotics
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View My Work</a>
+        <a class="btn btn-outline" href="#contact">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p>
+          I am a Ph.D. student in Computer Science at the University of Utah, where I work with
+          Prof. Fuheng Zhao on systems and formal-verification research. My interests span
+          systems programming, model checking, LLVM instrumentation, and concurrency, and I have a
+          strong background in robotics, embedded systems, and deep learning from my undergraduate
+          work at MBM University, Jodhpur.
+        </p>
+        <p>
+          Before graduate school, I contributed to the open-source <strong>McMini</strong> model
+          checker, developed autonomous robotics systems, and led large student teams — including
+          mentoring 500+ students as student coordinator of the Embedded Systems &amp; Robotics Club.
+        </p>
+      </div>
+    </section>
+
+    <section id="education" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="card">
+          <h3>Ph.D. in Computer Science</h3>
+          <p class="muted">University of Utah &mdash; Advisor: Prof. Fuheng Zhao &mdash; Present</p>
+        </div>
+        <div class="card">
+          <h3>B.E., Electronics and Computer Engineering</h3>
+          <p class="muted">MBM University, Jodhpur &mdash; 2021&ndash;2025 &mdash; CGPA: 7.45</p>
+        </div>
+        <div class="card">
+          <h3>Senior Secondary (12th)</h3>
+          <p class="muted">St. Anne's Sr. Sec. School, Jodhpur &mdash; 2020 &mdash; 84.2%</p>
+        </div>
+        <div class="card">
+          <h3>Secondary (10th)</h3>
+          <p class="muted">St. Anne's Sr. Sec. School, Jodhpur &mdash; 2018 &mdash; 86.4%</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container">
+        <h2 class="section-title">Research</h2>
+        <div class="card">
+          <h3>McMini: DPOR-based Model Checker</h3>
+          <p class="muted">Systems Programming, Model Checking, LLVM Instrumentation</p>
+          <ul>
+            <li>Added a heuristic for livelock detection.</li>
+            <li>Built an LLVM instrumentation plugin to detect reads/writes of global variables, enabling data-race detection in executables.</li>
+            <li>Implemented command-line flags to enhance usability.</li>
+          </ul>
+        </div>
+        <p class="note">
+          Ongoing work in Prof. Fuheng Zhao's group focuses on systems and formal methods —
+          details of the current dissertation research are in progress.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="card">
+          <h3>Autonomous Damage Control &amp; Monitoring with Real-Time Tracking</h3>
+          <p class="muted">Robotics, Deep Learning, Path Planning, Image Processing</p>
+          <ul>
+            <li>Autonomous robot delivering essential utilities in disaster-affected areas.</li>
+            <li>Watchtower with a high-resolution camera detects damage using a neural network model.</li>
+            <li>Priority-ordered optimal path planning for multiple events; wireless control with line following.</li>
+            <li>Live robot location plotted on a map for movement monitoring.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Transparent Checkpointing</h3>
+          <p class="muted">Advanced C, Systems Programming, Checkpointing</p>
+          <ul>
+            <li>Implemented transparent checkpointing in C using the SIGUSR2 signal.</li>
+            <li>On incorrect process termination, restarts the process from the saved checkpoint.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>WiSh: Linux Shell</h3>
+          <p class="muted">C, Systems Programming, Process Control, System Calls</p>
+          <ul>
+            <li>Interactive shell in C supporting basic Linux commands with built-in <code>cd</code>, <code>path</code>, <code>exit</code>.</li>
+            <li>I/O redirection support.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Two-Link Robotic Arm Playing 5&times;5 Tic-Tac-Toe</h3>
+          <p class="muted">Robotics, Kinematics, Image Processing, Wireless Communication</p>
+          <ul>
+            <li>Two-link robotic arm that plays optimal tic-tac-toe against a human.</li>
+            <li>Captures real-time board position and uses the minimax algorithm with alpha-beta pruning.</li>
+            <li>Magnetic gripper picks up checkers and places them on the board.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Maze Solver Robot</h3>
+          <p class="muted">Microcontrollers, Robotics, Maze Solving</p>
+          <ul>
+            <li>Line-following robot that explores a maze in a dry run, then traverses the shortest path.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Database Management System (C++)</h3>
+          <p class="muted">C++, Databases, File Management, Command Parsing</p>
+          <ul>
+            <li>DBMS supporting tables with up to 10 fields (int/string) and search, update, add, delete, sort.</li>
+            <li>Parses string-type commands and performs the requested operation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="card">
+          <h3>Research Trainee — DRDO, Jodhpur</h3>
+          <p class="muted">2023</p>
+          <ul>
+            <li>Studied radio communication; implemented a temperature monitoring system for remote monitoring of system health.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills-list">
+          <li>Languages: C, C++, Python</li>
+          <li>Linux &amp; Systems Programming</li>
+          <li>Model Checking &amp; LLVM Instrumentation</li>
+          <li>Concurrency &amp; Verification</li>
+          <li>Deep Learning</li>
+          <li>Microcontrollers: Arduino, Raspberry Pi, ESP32</li>
+          <li>Image Processing (OpenCV/MATLAB)</li>
+          <li>Robotics and Control</li>
+          <li>SQL (MySQL, SQL Server Management Studio)</li>
+          <li>Digital Logic</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="awards" class="section">
+      <div class="container">
+        <h2 class="section-title">Awards &amp; Competitions</h2>
+        <div class="card">
+          <h3>Student Achievers Award 2025</h3>
+          <p class="muted">MBM University</p>
+          <p>Awarded annually to the top 4 students for exemplary achievements across academics, art &amp; culture, sports, and community service.</p>
+        </div>
+        <div class="card">
+          <h3>E-Yantra Robotics Competition 2023</h3>
+          <p class="muted">IIT Bombay</p>
+          <p>Completed Stage 1 of the 6-month robotics competition.</p>
+        </div>
+        <div class="card">
+          <h3>Encarta 2022 — 1st Prize, Line-Follower Robot</h3>
+          <p class="muted">MBM University Technical Fest</p>
+          <p>Won first place in the line-follower robot competition.</p>
+        </div>
+        <div class="card">
+          <h3>Google Code-in 2018</h3>
+          <p class="muted">Haiku (open-source OS)</p>
+          <p>Completed 2 tasks for the Haiku operating system project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Leadership</h2>
+        <div class="card">
+          <h3>Student Coordinator, Embedded Systems &amp; Robotics Club</h3>
+          <p class="muted">MBM University — 2022&ndash;2025</p>
+          <ul>
+            <li>Served as coordinator for 3 consecutive terms; organized three 45-day robotics workshops.</li>
+            <li>Mentored 500+ students.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Event Coordinator, TechKriti 2023</h3>
+          <p class="muted">MBM University</p>
+          <ul>
+            <li>Helped organize the annual technical fest with a footfall of 2000+ people.</li>
+            <li>Managed a team of 50+; curated content for brochures and advertising.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Wiki Lead, GDSC MBM University</h3>
+          <p class="muted">2022&ndash;2023</p>
+          <p>Curated quality technical content for the Google Developer Students Club community.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p>I'm always happy to talk about systems, verification, and robotics. Reach out anytime.</p>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:harshitaleela@gmail.com">harshitaleela@gmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/harshitaleela" target="_blank" rel="noopener">github.com/harshitaleela</a></li>
+          <li>University: University of Utah, School of Computing</li>
+          <li>Location: Salt Lake City, UT / Jodhpur, India</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Harshita Lila &mdash; PhD student, University of Utah (advised by Prof. Fuheng Zhao)</p>
+    </div>
+  </footer>
+</body>
+</html>
