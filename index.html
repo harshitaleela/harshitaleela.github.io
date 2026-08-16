@@ -3,299 +3,466 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harshita Lila — CS PhD Student, University of Utah</title>
-  <meta name="description" content="Portfolio of Harshita Lila, incoming PhD student in Computer Science at the University of Utah, advised by Prof. Fuheng Zhao. Research interests in semantic operations and NL2SQL." />
+  <title>Harshita Lila — Ph.D. Student in Computer Science, University of Utah</title>
+  <meta name="description" content="Harshita Lila is a Ph.D. student in Computer Science at the University of Utah, interested in building intelligent and reliable systems at the intersection of systems, databases, AI, and software correctness." />
+  <meta name="author" content="Harshita Lila" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Harshita Lila — Computer Science Ph.D. Student, University of Utah" />
+  <meta property="og:description" content="Interested in building intelligent and reliable systems at the intersection of computer systems, databases, artificial intelligence, and software correctness." />
+  <meta property="og:url" content="https://harshitaleela.github.io/" />
+  <meta name="theme-color" content="#cc2f2f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <nav class="navbar">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="navbar" aria-label="Primary">
     <div class="container nav-inner">
       <a class="brand" href="#home">Harshita&nbsp;Lila</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="assets/Harshita-Lila-CV.pdf">CV</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <header id="home" class="hero">
-    <div class="container">
-      <h1 class="name">Harshita Lila</h1>
-      <p class="tagline">Incoming Ph.D. Student in Computer Science — University of Utah</p>
-      <p class="advisor">Advised by <a href="https://www.cs.utah.edu/~fzhao/" target="_blank" rel="noopener">Prof. Fuheng Zhao</a></p>
-      <p class="research-focus">
-        Semantic operations &bull; NL2SQL &bull; model checking &bull; formal verification
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#projects">View My Work</a>
-        <a class="btn btn-outline" href="#contact">Get In Touch</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section id="about" class="section">
+  <main id="main">
+    <header id="home" class="hero">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p>
-          I am an incoming Ph.D. student in Computer Science at the University of Utah, where I
-          will be joining the group of Prof. Fuheng Zhao in the UtahDB lab. I will be working on
-          semantic operations and NL2SQL — integrating large language models into database systems
-          through semantic operators such as NL2SQL translation, semantic filters, and reasoning
-          joins, so that data becomes accessible through natural language interfaces. I am also
-          deeply interested in model checking and formal verification of concurrent programs — an
-          interest developed while building the livelock-detection heuristic in the McMini model
-          checker.
+        <p class="kicker">University of Utah &mdash; Kahlert School of Computing</p>
+        <h1 class="name">Harshita Lila</h1>
+        <p class="tagline">Ph.D. Student in Computer Science</p>
+        <p class="focus">Systems &bull; Reliability &bull; Databases &bull; AI</p>
+        <p class="intro">
+          I am interested in building intelligent and reliable systems at the intersection of
+          computer systems, databases, artificial intelligence, and software correctness.
         </p>
-        <p>
-          Before graduate school, I worked under <strong>Prof. Gene Cooperman</strong> at
-          Northeastern University (introduced to me by my mentor Prof. Alok Singh Gahlot), where I
-          contributed to <strong>McMini</strong>, an open-source DPOR-based model checker for
-          multithreaded programs. I also built autonomous robotics systems, developed a reliable
-          RF-based remote monitoring link as a research trainee at <strong>DRDO</strong>, and led
-          large student teams — mentoring 500+ students through the Embedded Systems &amp; Robotics
-          Club.
+        <p class="secondary">
+          My research experience includes concurrent-program verification and model checking,
+          with broader interests in reliable data and AI systems.
         </p>
-        <p>
-          My academic trajectory has consistently led me towards reliability and fault tolerance in
-          systems, and I am excited to explore research at the intersection of scalable data
-          systems, semantics, and correctness.
-        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#research">Research</a>
+          <a class="btn btn-outline" href="assets/Harshita-Lila-CV.pdf" download>Download CV</a>
+          <a class="btn btn-outline" href="https://github.com/harshitaleela" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-outline" href="mailto:harshitaleela@gmail.com">Email</a>
+        </div>
       </div>
-    </section>
+    </header>
 
-    <section id="education" class="section alt">
+    <section id="research-interests" class="section" aria-label="Research interests">
       <div class="container">
-        <h2 class="section-title">Education</h2>
-        <div class="card">
-          <h3>Ph.D. in Computer Science</h3>
-          <p class="muted">University of Utah &mdash; Advisor: Prof. Fuheng Zhao</p>
+        <h2 class="section-title">Research Interests</h2>
+        <div class="interest-grid">
+          <article class="interest-card">
+            <h3>Systems &amp; Reliability</h3>
+            <p>Concurrency, model checking, software correctness, reliability.</p>
+          </article>
+          <article class="interest-card">
+            <h3>Databases &amp; Data Systems</h3>
+            <p>Database systems, semantic operations, data management.</p>
+          </article>
+          <article class="interest-card">
+            <h3>AI &amp; Intelligent Systems</h3>
+            <p>AI-assisted systems, natural-language interfaces to data, LLM-based systems.</p>
+          </article>
+          <article class="interest-card">
+            <h3>Formal Methods</h3>
+            <p>Formal verification, liveness, correctness, program behavior.</p>
+          </article>
         </div>
-        <div class="card">
-          <h3>B.E., Electronics and Computer Engineering</h3>
-          <p class="muted">MBM University, Jodhpur &mdash; 2021&ndash;2025</p>
-        </div>
-        <div class="card">
-          <h3>Senior Secondary (12th)</h3>
-          <p class="muted">St. Anne's Sr. Sec. School, Jodhpur &mdash; 2020 &mdash; 84.2%</p>
-        </div>
-        <div class="card">
-          <h3>Secondary (10th)</h3>
-          <p class="muted">St. Anne's Sr. Sec. School, Jodhpur &mdash; 2018 &mdash; 86.4%</p>
-        </div>
+        <p class="note">These interests are evolving as I begin my doctoral research.</p>
       </div>
     </section>
 
-    <section id="research" class="section">
+    <section id="research" class="section alt" aria-label="Research experience">
       <div class="container">
-        <h2 class="section-title">Past &amp; Ongoing Research</h2>
+        <h2 class="section-title">Research</h2>
 
-        <div class="card">
-          <h3>Livelock Detection Using Cycle Decomposition in a Model Checker</h3>
-          <p class="muted">With Aayushi Gautam and Prof. Gene Cooperman, Northeastern University</p>
-          <ul>
-            <li>Proposed <strong>Algorithm A</strong>, a livelock detection algorithm built on the McMini in-situ stateless model checker, addressing liveness violations — executions in which threads continue to run but make no progress, leaving no bad state as evidence.</li>
-            <li>Introduced <strong>cycle decomposition</strong>: partition livelocked threads into small, independent subsets, each cycling without progress, to produce short, interpretable per-cycle witnesses instead of one long entangled trace.</li>
-            <li>Use <strong>visible-object sharing</strong> (mutexes, semaphores, condition variables, shared variables) as a sound runtime over-approximation of the happens-before relation to identify interacting threads without building the full state space.</li>
-            <li>Explores a single bounded execution suffix per round, avoiding exhaustive schedule enumeration and cross-schedule state caching (in contrast to Lasso detection).</li>
-            <li>Established a <strong>soundness proof</strong>: if the algorithm reports livelock at state S<sub>0</sub>, no infinite execution from S<sub>0</sub> contains a user-declared progress transition (under three stated assumptions, including <code>MC_PROGRESS()</code> annotations).</li>
-            <li>Detects common livelock patterns such as busy-waiting and ping-pong exchanges; explicitly characterizes completeness boundaries (determinism restriction, potential false positives under non-deterministic <code>sem_post()</code>).</li>
+        <article class="research-item">
+          <header class="research-head">
+            <h3>Livelock Detection Using Cycle Decomposition in a Model Checker</h3>
+            <p class="muted">Harshita Lila &middot; Aayushi Gautam &middot; Prof. Gene Cooperman &mdash; Northeastern University / McMini</p>
+          </header>
+          <p>
+            I developed a livelock-detection heuristic for McMini, an in-situ stateless model checker
+            for concurrent programs. The work addresses executions in which threads continue to
+            execute but fail to make meaningful progress.
+          </p>
+          <ul class="research-points">
+            <li>Developed a cycle-decomposition approach for identifying interacting groups of threads involved in livelock.</li>
+            <li>Used visible-object sharing, including mutexes, semaphores, condition variables, and shared variables, as a runtime approximation for thread interaction.</li>
+            <li>Designed the approach to analyze bounded execution suffixes rather than exhaustively enumerate schedules.</li>
+            <li>Produced shorter and more interpretable livelock witnesses.</li>
+            <li>Established soundness conditions and characterized limitations involving nondeterminism and progress annotations.</li>
           </ul>
+          <p class="tags"><span class="tag">Model Checking</span><span class="tag">Concurrency</span><span class="tag">Formal Verification</span><span class="tag">Livelock</span></p>
+
+          <details class="read-more">
+            <summary>Technical details</summary>
+            <p>
+              In an in-situ stateless model checker such as McMini, only transitions already executed
+              on the current branch are observable, so the full happens-before relation is unavailable
+              at runtime. The approach approximates thread interaction using visible-object sharing:
+              two transitions are considered related when they access a common visible object such as a
+              mutex, semaphore, condition variable, or shared variable. This is a sound over-approximation
+              of happens-before.
+            </p>
+            <p>
+              The algorithm decomposes the set of threads into independent subsets, each cycling without
+              progress, and searches each subset for state recurrence within a bounded execution suffix.
+              It thereby avoids both exhaustive schedule enumeration and cross-schedule state caching.
+              The result is a short, per-cycle livelock witness that a developer can inspect directly.
+            </p>
+            <p>
+              Soundness conditions were established under explicit assumptions, including developer-annotated
+              progress points, and known limitations were characterized &mdash; for example, potential false
+              positives arising from nondeterministic synchronization such as <code>sem_post()</code>.
+            </p>
+          </details>
+        </article>
+
+        <div class="flow" aria-label="How livelock detection works">
+          <div class="flow-step">Concurrent Program</div>
+          <div class="flow-arrow" aria-hidden="true">&darr;</div>
+          <div class="flow-step">Bounded Execution</div>
+          <div class="flow-arrow" aria-hidden="true">&darr;</div>
+          <div class="flow-step">Thread Interaction / Visible Objects</div>
+          <div class="flow-arrow" aria-hidden="true">&darr;</div>
+          <div class="flow-step">Cycle Decomposition</div>
+          <div class="flow-arrow" aria-hidden="true">&darr;</div>
+          <div class="flow-step">Livelock Witness</div>
         </div>
 
-        <div class="card">
-          <h3>McMini: DPOR-based Model Checker</h3>
-          <p class="muted">Open-source contribution &mdash; Prof. Gene Cooperman, Northeastern University</p>
-          <ul>
-            <li>Developed an LLVM instrumentation plugin to intercept accesses to global variables, wrapping them with runtime checks to detect non-deterministic reads and writes (data races).</li>
-            <li>Implemented command-line flags to make the software easier to use.</li>
+        <article class="research-item">
+          <header class="research-head">
+            <h3>McMini &mdash; DPOR-Based Model Checker</h3>
+            <p class="muted">Open-source contribution &mdash; Northeastern University</p>
+          </header>
+          <p>
+            I contributed to McMini, an open-source DPOR-based model checker for multithreaded
+            programs developed at Northeastern University.
+          </p>
+          <ul class="research-points">
+            <li>Developed an LLVM instrumentation plugin for monitoring global-variable accesses.</li>
+            <li>Added runtime handling for reads and writes to support data-race-related analysis.</li>
+            <li>Implemented usability improvements and command-line options.</li>
+            <li>Worked on concurrent synchronization mechanisms and model-checking infrastructure.</li>
+            <li>Contributed to transparent checkpointing and systems-level debugging.</li>
           </ul>
+          <p class="tags"><span class="tag">Systems Programming</span><span class="tag">LLVM Instrumentation</span><span class="tag">DPOR</span><span class="tag">Concurrency</span></p>
+        </article>
+
+        <h3 class="subsection-title">Research Directions I Am Exploring</h3>
+        <p class="muted intro-line">
+          As I begin my Ph.D., I am particularly interested in research questions at the intersection
+          of systems, databases, and artificial intelligence.
+        </p>
+        <div class="directions-grid">
+          <article class="direction-card">
+            <h4>Semantic Operations</h4>
+            <p>Exploring how semantic operations could extend traditional database systems beyond conventional query operators.</p>
+          </article>
+          <article class="direction-card">
+            <h4>Natural-Language Interfaces to Data</h4>
+            <p>Interest in systems that allow users to interact with structured data through natural language, including NL2SQL.</p>
+          </article>
+          <article class="direction-card">
+            <h4>AI + Database Systems</h4>
+            <p>Interest in how language models can be integrated into data-management systems while addressing reliability, efficiency, and correctness.</p>
+          </article>
+          <article class="direction-card">
+            <h4>Reliable Intelligent Systems</h4>
+            <p>Understanding how increasingly complex AI-driven systems can remain predictable, interpretable, and dependable.</p>
+          </article>
         </div>
 
-        <p class="note">
-          I am excited to apply this model-checking mindset to building scalable, correct, and
-          human-centered data systems.
-        </p>
+        <h3 class="subsection-title">Publications &amp; Research Outputs</h3>
+        <div class="outputs">
+          <div class="output-item">
+            <h4>Research projects</h4>
+            <ul>
+              <li>Livelock Detection Using Cycle Decomposition in a Model Checker</li>
+              <li>McMini model-checker contributions</li>
+            </ul>
+          </div>
+          <div class="output-item">
+            <h4>Links</h4>
+            <ul>
+              <li>McMini: <a href="https://github.com/mcminickpt/mcmini" target="_blank" rel="noopener">github.com/mcminickpt/mcmini</a></li>
+              <li>My GitHub: <a href="https://github.com/harshitaleela" target="_blank" rel="noopener">github.com/harshitaleela</a></li>
+            </ul>
+            <p class="muted">New publications will be added here as they become available.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="section alt">
+    <section id="journey" class="section" aria-label="Research journey">
+      <div class="container">
+        <h2 class="section-title">Research Journey</h2>
+        <ol class="timeline">
+          <li class="tl-item">
+            <div class="tl-year">2022&ndash;2025</div>
+            <div class="tl-body">
+              <h3>Robotics &amp; Embedded Systems</h3>
+              <ul>
+                <li>Autonomous robotics</li>
+                <li>Embedded controllers</li>
+                <li>Path planning</li>
+                <li>Computer vision</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="tl-year">2023</div>
+            <div class="tl-body">
+              <h3>DRDO</h3>
+              <ul>
+                <li>RF communication</li>
+                <li>Remote sensor monitoring</li>
+                <li>Reliability under noisy communication conditions</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="tl-year">2024&ndash;2026</div>
+            <div class="tl-body">
+              <h3>Concurrency &amp; Model Checking</h3>
+              <ul>
+                <li>McMini</li>
+                <li>Livelock detection</li>
+                <li>Formal verification</li>
+                <li>LLVM instrumentation</li>
+                <li>Systems programming</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl-item">
+            <div class="tl-year">2026&ndash;Present</div>
+            <div class="tl-body">
+              <h3>Ph.D. &mdash; University of Utah</h3>
+              <p>Developing research interests in systems, databases, AI, and reliability.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt" aria-label="Selected projects">
       <div class="container">
         <h2 class="section-title">Selected Projects</h2>
 
-        <div class="card">
-          <h3>Autonomous Damage Control &amp; Monitoring with Real-Time Tracking</h3>
-          <p class="muted">Robotics, Deep Learning, Path Planning, Image Processing</p>
-          <ul>
-            <li>Autonomous robot delivering essential utilities in disaster-affected areas.</li>
-            <li>Watchtower with a high-resolution camera detects damage using a neural network model.</li>
-            <li>Priority-ordered optimal path planning for multiple events; wireless control with line following.</li>
-            <li>Live robot location plotted on a map for movement monitoring.</li>
-          </ul>
+        <div class="featured-grid">
+          <article class="project-card">
+            <h3>Autonomous Damage Control &amp; Monitoring</h3>
+            <p class="muted">E-Yantra Robotics Competition</p>
+            <ul>
+              <li>Disaster-response robot delivering essential utilities</li>
+              <li>Neural-network-based damage classification</li>
+              <li>Priority-based path planning</li>
+              <li>Wireless control and real-time location tracking</li>
+            </ul>
+            <p class="tags"><span class="tag">Robotics</span><span class="tag">Deep Learning</span><span class="tag">Path Planning</span></p>
+          </article>
+
+          <article class="project-card">
+            <h3>Transparent Checkpointing</h3>
+            <p class="muted">Systems programming in C</p>
+            <ul>
+              <li>SIGUSR2-based checkpoint and recovery</li>
+              <li>Process restart from saved checkpoint on incorrect termination</li>
+              <li>Checkpoint/restart behavior</li>
+            </ul>
+            <p class="tags"><span class="tag">C</span><span class="tag">Systems Programming</span></p>
+          </article>
+
+          <article class="project-card">
+            <h3>Two-Link Robotic Arm</h3>
+            <p class="muted">5&times;5 tic-tac-toe against a human</p>
+            <ul>
+              <li>Kinematics and computer vision</li>
+              <li>Minimax with alpha-beta pruning</li>
+              <li>Magnetic gripper for checkers</li>
+            </ul>
+            <p class="tags"><span class="tag">Robotics</span><span class="tag">Kinematics</span><span class="tag">Computer Vision</span></p>
+          </article>
         </div>
 
-        <div class="card">
-          <h3>Transparent Checkpointing</h3>
-          <p class="muted">Under Prof. Gene Cooperman, Northeastern University — Advanced C, Systems Programming</p>
+        <details class="other-projects">
+          <summary>Other projects</summary>
           <ul>
-            <li>Implemented transparent checkpointing in C using the SIGUSR2 signal.</li>
-            <li>On incorrect process termination, restarts the process from the saved checkpoint.</li>
+            <li><strong>WiSh Linux Shell</strong> &mdash; interactive shell in C with built-in commands and I/O redirection</li>
+            <li><strong>Maze Solver Robot</strong> &mdash; line-following robot that finds the shortest path through a maze</li>
+            <li><strong>Database Management System</strong> &mdash; C++ DBMS with parsing and record operations</li>
           </ul>
-        </div>
-
-        <div class="card">
-          <h3>WiSh: Linux Shell</h3>
-          <p class="muted">C, Systems Programming, Process Control, System Calls</p>
-          <ul>
-            <li>Interactive shell in C supporting basic Linux commands with built-in <code>cd</code>, <code>path</code>, <code>exit</code>.</li>
-            <li>I/O redirection support.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Two-Link Robotic Arm Playing 5&times;5 Tic-Tac-Toe</h3>
-          <p class="muted">Robotics, Kinematics, Image Processing, Wireless Communication</p>
-          <ul>
-            <li>Two-link robotic arm that plays optimal tic-tac-toe against a human.</li>
-            <li>Captures real-time board position and uses the minimax algorithm with alpha-beta pruning.</li>
-            <li>Magnetic gripper picks up checkers and places them on the board.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Maze Solver Robot</h3>
-          <p class="muted">Microcontrollers, Robotics, Maze Solving</p>
-          <ul>
-            <li>Line-following robot that explores a maze in a dry run, then traverses the shortest path.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Database Management System (C++)</h3>
-          <p class="muted">C++, Databases, File Management, Command Parsing</p>
-          <ul>
-            <li>DBMS supporting tables with up to 10 fields (int/string) and search, update, add, delete, sort.</li>
-            <li>Parses string-type commands and performs the requested operation.</li>
-          </ul>
-        </div>
+        </details>
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="work" class="section" aria-label="Experience">
       <div class="container">
         <h2 class="section-title">Experience</h2>
-        <div class="card">
-          <h3>Research Trainee — DRDO, Jodhpur</h3>
-          <p class="muted">2023</p>
-          <ul>
-            <li>Built a reliable radio-frequency communication link between two sensor nodes to enable remote temperature monitoring across rooms.</li>
-            <li>Experimented with communication ranges, interference conditions, and maximizing data transfer through noisy channels on real-world, low-power hardware.</li>
+        <article class="work-item">
+          <header class="research-head">
+            <h3>Research Trainee &mdash; DRDO</h3>
+            <p class="muted">Jodhpur &middot; 2023</p>
+          </header>
+          <p>
+            Worked on reliable RF-based communication between sensor nodes for remote temperature
+            monitoring.
+          </p>
+          <ul class="research-points">
+            <li>Built a wireless communication link between two sensor nodes.</li>
+            <li>Investigated communication range and interference.</li>
+            <li>Evaluated data-transfer reliability under noisy conditions.</li>
+            <li>Worked with real-world low-power hardware.</li>
           </ul>
+          <p class="tags"><span class="tag">RF Communication</span><span class="tag">Wireless</span><span class="tag">Embedded Systems</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="section alt" aria-label="Education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="edu-card">
+          <div class="edu-body">
+            <h3>Ph.D. in Computer Science</h3>
+            <p class="muted">University of Utah, School of Computing &mdash; 2026&ndash;Present</p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-body">
+            <h3>B.E. in Electronics and Computer Engineering</h3>
+            <p class="muted">MBM University, Jodhpur &mdash; 2021&ndash;2025</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section alt">
+    <section id="skills" class="section" aria-label="Skills">
       <div class="container">
         <h2 class="section-title">Skills</h2>
-        <ul class="skills-list">
-          <li>Languages: C, C++, Python</li>
-          <li>Linux &amp; Systems Programming</li>
-          <li>Model Checking &amp; LLVM Instrumentation</li>
-          <li>Concurrency &amp; Verification</li>
-          <li>Deep Learning</li>
-          <li>Microcontrollers: Arduino, Raspberry Pi, ESP32</li>
-          <li>Image Processing (OpenCV/MATLAB)</li>
-          <li>Robotics and Control</li>
-          <li>SQL (MySQL, SQL Server Management Studio)</li>
-          <li>Digital Logic</li>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Systems</h3>
+            <p>C, C++, Linux, systems programming, concurrency</p>
+          </div>
+          <div class="skill-group">
+            <h3>Verification</h3>
+            <p>Model checking, formal verification, LLVM instrumentation</p>
+          </div>
+          <div class="skill-group">
+            <h3>AI &amp; Data</h3>
+            <p>Python, deep learning, SQL, databases</p>
+          </div>
+          <div class="skill-group">
+            <h3>Robotics &amp; Hardware</h3>
+            <p>Arduino, ESP32, Raspberry Pi, OpenCV, robotics</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="section alt" aria-label="Awards">
+      <div class="container">
+        <h2 class="section-title">Awards &amp; Recognition</h2>
+        <ul class="compact-list">
+          <li><strong>Student Achievers Award</strong>, MBM University &mdash; 2025</li>
+          <li><strong>1st Prize</strong>, National MSME Conclave, IIT Jodhpur</li>
+          <li><strong>E-Yantra Robotics Competition</strong>, IIT Bombay &mdash; 2023</li>
+          <li><strong>1st Prize</strong>, Line-Follower Robot, MBM University Technical Fest &mdash; 2022</li>
+          <li><strong>Google Code-in</strong>, Haiku OS &mdash; 2018</li>
         </ul>
       </div>
     </section>
 
-    <section id="awards" class="section">
-      <div class="container">
-        <h2 class="section-title">Awards &amp; Competitions</h2>
-        <div class="card">
-          <h3>Student Achievers Award 2025</h3>
-          <p class="muted">MBM University</p>
-          <p>Awarded annually to the top 4 students for exemplary achievements across academics, art &amp; culture, sports, and community service.</p>
-        </div>
-        <div class="card">
-          <h3>E-Yantra Robotics Competition 2023</h3>
-          <p class="muted">IIT Bombay</p>
-          <p>Led a team of four through the 6-month competition, implementing a disaster-zone monitoring and relief system with neural-network damage classification and priority-based aid delivery.</p>
-        </div>
-        <div class="card">
-          <h3>Encarta 2022 — 1st Prize, Line-Follower Robot</h3>
-          <p class="muted">MBM University Technical Fest</p>
-          <p>Won first place in the line-follower robot competition.</p>
-        </div>
-        <div class="card">
-          <h3>Google Code-in 2018</h3>
-          <p class="muted">Haiku (open-source OS)</p>
-          <p>Completed 2 tasks for the Haiku operating system project.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="leadership" class="section alt">
+    <section id="leadership" class="section" aria-label="Leadership">
       <div class="container">
         <h2 class="section-title">Leadership</h2>
-        <div class="card">
-          <h3>Student Coordinator, Embedded Systems &amp; Robotics Club</h3>
-          <p class="muted">MBM University — 2022&ndash;2025</p>
-          <ul>
-            <li>Served as coordinator for 3 consecutive terms; organized three 45-day robotics workshops in collaboration with Prof. Alok Singh Gahlot, guiding over 500 students from sensor integration to PID control and A* / Dijkstra path planning.</li>
-            <li>Mentored 500+ students.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Event Coordinator, TechKriti 2023</h3>
-          <p class="muted">MBM University</p>
-          <ul>
-            <li>Helped organize the annual technical fest with a footfall of 2000+ people.</li>
-            <li>Managed a team of 50+; curated content for brochures and advertising.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Wiki Lead, GDSC MBM University</h3>
-          <p class="muted">2022&ndash;2023</p>
-          <p>Curated quality technical content for the Google Developer Students Club community.</p>
+        <article class="leadership-item">
+          <header class="research-head">
+            <h3>Student Coordinator &mdash; Embedded Systems &amp; Robotics Club</h3>
+            <p class="muted">MBM University &middot; 2022&ndash;2025</p>
+          </header>
+          <p class="stat">500+</p>
+          <p>Students mentored through robotics workshops covering sensor integration, PID control, and path-planning algorithms.</p>
+        </article>
+        <article class="leadership-item">
+          <header class="research-head">
+            <h3>Event Coordinator &mdash; TechKriti</h3>
+            <p class="muted">MBM University &middot; 2023</p>
+          </header>
+          <p>Organized the annual technical fest with 2,000+ attendees, managing a team of 50+ people.</p>
+        </article>
+        <article class="leadership-item">
+          <header class="research-head">
+            <h3>Wiki Lead &mdash; GDSC MBM University</h3>
+            <p class="muted">2022&ndash;2023</p>
+          </header>
+          <p>Curated technical content for the Google Developer Students Club community.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section alt" aria-label="About">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div>
+            <p>
+              I am a Ph.D. student in Computer Science at the University of Utah. My broader interests
+              lie at the intersection of computer systems, databases, artificial intelligence, and
+              software reliability.
+            </p>
+            <p>
+              My research experience includes concurrent-program verification and model checking.
+              Before graduate school, I worked with Prof. Gene Cooperman at Northeastern University on
+              McMini, an open-source DPOR-based model checker for multithreaded programs. My work
+              included livelock detection, LLVM-based instrumentation, and systems-level development.
+            </p>
+            <p>
+              My earlier work in robotics, embedded systems, and wireless communication gave me a
+              hands-on perspective on building systems under real-world constraints. I am interested
+              in carrying this systems perspective into research on reliable and intelligent data and
+              AI systems.
+            </p>
+          </div>
+          <div>
+            <h3 class="subsection-title">Beyond Research</h3>
+            <ul class="compact-list">
+              <li>Painting &amp; mural art</li>
+              <li>Reading and writing</li>
+              <li>Robotics tinkering</li>
+              <li>Community activities</li>
+              <li>Sports</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="hobbies" class="section alt">
+    <section id="contact" class="section" aria-label="Contact">
       <div class="container">
-        <h2 class="section-title">Hobbies &amp; Interests</h2>
-        <ul class="skills-list">
-          <li>Painting &amp; mural art</li>
-          <li>Literary activities &amp; writing</li>
-          <li>Robotics tinkering &amp; electronics</li>
-          <li>Reading</li>
-          <li>Community service</li>
-          <li>Sports</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p>I'm always happy to talk about systems, verification, and robotics. Reach out anytime.</p>
+        <h2 class="section-title">Get in Touch</h2>
+        <p>
+          I am always happy to discuss systems, verification, databases, AI, robotics, or research
+          collaborations.
+        </p>
         <ul class="contact-list">
           <li>Email: <a href="mailto:harshitaleela@gmail.com">harshitaleela@gmail.com</a></li>
-          <li>GitHub: <a href="https://github.com/harshitalila" target="_blank" rel="noopener">github.com/harshitalila</a></li>
-          <li>University: University of Utah, School of Computing</li>
-          <li>Location: Salt Lake City, UT / Jodhpur, India</li>
+          <li>GitHub: <a href="https://github.com/harshitaleela" target="_blank" rel="noopener">github.com/harshitaleela</a></li>
+          <li>University: <a href="https://www.cs.utah.edu/" target="_blank" rel="noopener">University of Utah, School of Computing</a></li>
+          <li>CV: <a href="assets/Harshita-Lila-CV.pdf" download>Download CV (PDF)</a></li>
         </ul>
       </div>
     </section>
@@ -303,7 +470,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Harshita Lila &mdash; Incoming PhD student, University of Utah (advised by Prof. Fuheng Zhao)</p>
+      <p>&copy; 2026 Harshita Lila &mdash; Ph.D. Student in Computer Science, University of Utah</p>
     </div>
   </footer>
 </body>
