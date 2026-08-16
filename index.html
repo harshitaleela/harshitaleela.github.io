@@ -30,7 +30,7 @@
       <p class="tagline">Ph.D. Student in Computer Science — University of Utah</p>
       <p class="advisor">Advised by <a href="https://www.cs.utah.edu/~fzhao/" target="_blank" rel="noopener">Prof. Fuheng Zhao</a></p>
       <p class="research-focus">
-        Systems programming &bull; model checking &bull; formal verification &bull; robotics
+        High performance computing &bull; distributed systems &bull; model checking &bull; reliability &bull; robotics
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#projects">View My Work</a>
@@ -45,15 +45,25 @@
         <h2 class="section-title">About Me</h2>
         <p>
           I am a Ph.D. student in Computer Science at the University of Utah, where I work with
-          Prof. Fuheng Zhao on systems and formal-verification research. My interests span
-          systems programming, model checking, LLVM instrumentation, and concurrency, and I have a
-          strong background in robotics, embedded systems, and deep learning from my undergraduate
-          work at MBM University, Jodhpur.
+          Prof. Fuheng Zhao on systems and formal-verification research. My primary research
+          interests lie in high performance computing systems, distributed processing, and the
+          design of reliability and security mechanisms that can enhance robotics and automation.
         </p>
         <p>
-          Before graduate school, I contributed to the open-source <strong>McMini</strong> model
-          checker, developed autonomous robotics systems, and led large student teams — including
-          mentoring 500+ students as student coordinator of the Embedded Systems &amp; Robotics Club.
+          Before graduate school, I worked under <strong>Prof. Gene Cooperman</strong> at
+          Northeastern University (introduced to me by my mentor Prof. Alok Singh Gahlot), where I
+          contributed to <strong>McMini</strong>, an open-source DPOR-based model checker for
+          multithreaded programs. I also built autonomous robotics systems, developed a reliable
+          RF-based remote monitoring link as a research trainee at <strong>DRDO</strong>, and led
+          large student teams — mentoring 500+ students through the Embedded Systems &amp; Robotics
+          Club.
+        </p>
+        <p>
+          I secured a GATE (CS) rank of 7199 out of 123,967 candidates (94th percentile) and earned
+          a CGPA that ranks in the top 10% of my undergraduate programme. My academic trajectory
+          has consistently led me towards reliability and fault tolerance in systems, and I am
+          excited to explore research at the intersection of systems reliability, scalability, and
+          cybersecurity.
         </p>
       </div>
     </section>
@@ -85,16 +95,19 @@
         <h2 class="section-title">Research</h2>
         <div class="card">
           <h3>McMini: DPOR-based Model Checker</h3>
-          <p class="muted">Systems Programming, Model Checking, LLVM Instrumentation</p>
+          <p class="muted">Under Prof. Gene Cooperman, Northeastern University</p>
           <ul>
-            <li>Added a heuristic for livelock detection.</li>
-            <li>Built an LLVM instrumentation plugin to detect reads/writes of global variables, enabling data-race detection in executables.</li>
-            <li>Implemented command-line flags to enhance usability.</li>
+            <li>Researched livelock detection heuristics — detecting potential livelocks by looking for livelock-like cycles within a process's execution trace under a round-robin schedule.</li>
+            <li>Developed an LLVM instrumentation plugin to intercept accesses to global variables, wrapping them with runtime checks to detect non-deterministic reads and writes (data races).</li>
+            <li>Implemented command-line flags to make the software easier to use.</li>
           </ul>
         </div>
         <p class="note">
-          Ongoing work in Prof. Fuheng Zhao's group focuses on systems and formal methods —
-          details of the current dissertation research are in progress.
+          My work on model checking showed me how different CPU schedules produce non-deterministic
+          behaviour in concurrent programs — and how concurrency bugs such as data races are not
+          just correctness challenges but can become serious cybersecurity vulnerabilities if left
+          undetected. Ongoing work in Prof. Fuheng Zhao's group focuses on systems and formal
+          methods; details of the current dissertation research are in progress.
         </p>
       </div>
     </section>
@@ -116,7 +129,7 @@
 
         <div class="card">
           <h3>Transparent Checkpointing</h3>
-          <p class="muted">Advanced C, Systems Programming, Checkpointing</p>
+          <p class="muted">Under Prof. Gene Cooperman, Northeastern University — Advanced C, Systems Programming</p>
           <ul>
             <li>Implemented transparent checkpointing in C using the SIGUSR2 signal.</li>
             <li>On incorrect process termination, restarts the process from the saved checkpoint.</li>
@@ -168,7 +181,8 @@
           <h3>Research Trainee — DRDO, Jodhpur</h3>
           <p class="muted">2023</p>
           <ul>
-            <li>Studied radio communication; implemented a temperature monitoring system for remote monitoring of system health.</li>
+            <li>Built a reliable radio-frequency communication link between two sensor nodes to enable remote temperature monitoring across rooms.</li>
+            <li>Experimented with communication ranges, interference conditions, and maximizing data transfer through noisy channels on real-world, low-power hardware.</li>
           </ul>
         </div>
       </div>
@@ -203,7 +217,7 @@
         <div class="card">
           <h3>E-Yantra Robotics Competition 2023</h3>
           <p class="muted">IIT Bombay</p>
-          <p>Completed Stage 1 of the 6-month robotics competition.</p>
+          <p>Led a team of four through the 6-month competition, implementing a disaster-zone monitoring and relief system with neural-network damage classification and priority-based aid delivery.</p>
         </div>
         <div class="card">
           <h3>Encarta 2022 — 1st Prize, Line-Follower Robot</h3>
@@ -225,7 +239,7 @@
           <h3>Student Coordinator, Embedded Systems &amp; Robotics Club</h3>
           <p class="muted">MBM University — 2022&ndash;2025</p>
           <ul>
-            <li>Served as coordinator for 3 consecutive terms; organized three 45-day robotics workshops.</li>
+            <li>Served as coordinator for 3 consecutive terms; organized three 45-day robotics workshops in collaboration with Prof. Alok Singh Gahlot, guiding over 500 students from sensor integration to PID control and A* / Dijkstra path planning.</li>
             <li>Mentored 500+ students.</li>
           </ul>
         </div>
