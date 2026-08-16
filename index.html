@@ -40,14 +40,12 @@
         <p class="kicker">University of Utah &mdash; Kahlert School of Computing</p>
         <h1 class="name">Harshita Lila</h1>
         <p class="tagline">Ph.D. Student in Computer Science</p>
-        <p class="focus">Systems &bull; Reliability &bull; Databases &bull; AI</p>
+        <p class="focus">Systems &bull; Reliability &bull; Data Systems &bull; AI</p>
         <p class="intro">
-          I am interested in building intelligent and reliable systems at the intersection of
-          computer systems, databases, artificial intelligence, and software correctness.
-        </p>
-        <p class="secondary">
-          My research experience includes concurrent-program verification and model checking,
-          with broader interests in reliable data and AI systems.
+          I work on reliable software systems, with prior research in concurrent-program
+          verification, model checking, and systems programming. As a Ph.D. student at the
+          University of Utah, I will now be exploring how reliability and correctness can be
+          incorporated into data and AI systems.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#research">Research</a>
@@ -68,11 +66,11 @@
           </article>
           <article class="interest-card">
             <h3>Databases &amp; Data Systems</h3>
-            <p>Database systems, semantic operations, data management.</p>
+            <p>Database systems, semantic operations, data management, natural-language interfaces to data.</p>
           </article>
           <article class="interest-card">
             <h3>AI &amp; Intelligent Systems</h3>
-            <p>AI-assisted systems, natural-language interfaces to data, LLM-based systems.</p>
+            <p>AI-assisted data systems, LLM-based systems, reliable intelligent systems.</p>
           </article>
           <article class="interest-card">
             <h3>Formal Methods</h3>
@@ -94,53 +92,38 @@
           </header>
           <p>
             I developed a livelock-detection heuristic for McMini, an in-situ stateless model checker
-            for concurrent programs. The work addresses executions in which threads continue to
-            execute but fail to make meaningful progress.
+            for concurrent programs. The approach targets executions in which threads continue to
+            execute but collectively fail to make meaningful progress.
           </p>
           <ul class="research-points">
             <li>Developed a cycle-decomposition approach for identifying interacting groups of threads involved in livelock.</li>
             <li>Used visible-object sharing, including mutexes, semaphores, condition variables, and shared variables, as a runtime approximation for thread interaction.</li>
             <li>Designed the approach to analyze bounded execution suffixes rather than exhaustively enumerate schedules.</li>
             <li>Produced shorter and more interpretable livelock witnesses.</li>
-            <li>Established soundness conditions and characterized limitations involving nondeterminism and progress annotations.</li>
+            <li>Established soundness conditions under explicit assumptions and characterized limitations involving nondeterminism and progress annotations.</li>
           </ul>
           <p class="tags"><span class="tag">Model Checking</span><span class="tag">Concurrency</span><span class="tag">Formal Verification</span><span class="tag">Livelock</span></p>
 
           <details class="read-more">
             <summary>Technical details</summary>
             <p>
-              In an in-situ stateless model checker such as McMini, only transitions already executed
-              on the current branch are observable, so the full happens-before relation is unavailable
-              at runtime. The approach approximates thread interaction using visible-object sharing:
-              two transitions are considered related when they access a common visible object such as a
-              mutex, semaphore, condition variable, or shared variable. This is a sound over-approximation
-              of happens-before.
+              In an in-situ stateless model checker such as McMini, analysis is performed using
+              information available from the current execution branch rather than a globally cached
+              state space. The approach therefore approximates potential thread interaction using
+              visible-object sharing: two transitions are considered related when they access a common
+              visible object such as a mutex, semaphore, condition variable, or shared variable. This
+              provides a conservative approximation of potential interaction between threads without
+              requiring exhaustive exploration of alternative schedules.
             </p>
             <p>
-              The algorithm decomposes the set of threads into independent subsets, each cycling without
-              progress, and searches each subset for state recurrence within a bounded execution suffix.
-              It thereby avoids both exhaustive schedule enumeration and cross-schedule state caching.
-              The result is a short, per-cycle livelock witness that a developer can inspect directly.
-            </p>
-            <p>
-              Soundness conditions were established under explicit assumptions, including developer-annotated
-              progress points, and known limitations were characterized &mdash; for example, potential false
-              positives arising from nondeterministic synchronization such as <code>sem_post()</code>.
+              The algorithm decomposes threads into groups based on their observed interactions and
+              searches each group for state recurrence within a bounded execution suffix. It avoids
+              exhaustive enumeration of schedules and does not require cross-schedule state caching.
+              The result is a compact livelock witness that isolates the threads and execution cycle
+              associated with the suspected non-progress behavior.
             </p>
           </details>
         </article>
-
-        <div class="flow" aria-label="How livelock detection works">
-          <div class="flow-step">Concurrent Program</div>
-          <div class="flow-arrow" aria-hidden="true">&darr;</div>
-          <div class="flow-step">Bounded Execution</div>
-          <div class="flow-arrow" aria-hidden="true">&darr;</div>
-          <div class="flow-step">Thread Interaction / Visible Objects</div>
-          <div class="flow-arrow" aria-hidden="true">&darr;</div>
-          <div class="flow-step">Cycle Decomposition</div>
-          <div class="flow-arrow" aria-hidden="true">&darr;</div>
-          <div class="flow-step">Livelock Witness</div>
-        </div>
 
         <article class="research-item">
           <header class="research-head">
@@ -153,42 +136,42 @@
           </p>
           <ul class="research-points">
             <li>Developed an LLVM instrumentation plugin for monitoring global-variable accesses.</li>
-            <li>Added runtime handling for reads and writes to support data-race-related analysis.</li>
-            <li>Implemented usability improvements and command-line options.</li>
-            <li>Worked on concurrent synchronization mechanisms and model-checking infrastructure.</li>
+            <li>Extended runtime handling of global-variable reads and writes to support concurrency analysis.</li>
+            <li>Implemented livelock-detection functionality and related command-line options.</li>
+            <li>Added support for concurrent synchronization mechanisms and model-checking infrastructure.</li>
             <li>Contributed to transparent checkpointing and systems-level debugging.</li>
           </ul>
-          <p class="tags"><span class="tag">Systems Programming</span><span class="tag">LLVM Instrumentation</span><span class="tag">DPOR</span><span class="tag">Concurrency</span></p>
+          <p class="tags"><span class="tag">Systems Programming</span><span class="tag">LLVM Instrumentation</span><span class="tag">DPOR</span><span class="tag">Model Checking</span><span class="tag">Concurrency</span></p>
         </article>
 
-        <h3 class="subsection-title">Research Directions I Am Exploring</h3>
+        <h3 class="subsection-title">Current Research Directions</h3>
         <p class="muted intro-line">
-          As I begin my Ph.D., I am particularly interested in research questions at the intersection
-          of systems, databases, and artificial intelligence.
+          As I begin my Ph.D., I am exploring research questions at the intersection of systems,
+          data management, and artificial intelligence.
         </p>
         <div class="directions-grid">
           <article class="direction-card">
-            <h4>Semantic Operations</h4>
-            <p>Exploring how semantic operations could extend traditional database systems beyond conventional query operators.</p>
+            <h4>Semantic Data Systems</h4>
+            <p>Exploring how semantic operations can extend traditional database systems to support operations involving meaning, context, and natural-language information.</p>
           </article>
           <article class="direction-card">
             <h4>Natural-Language Interfaces to Data</h4>
-            <p>Interest in systems that allow users to interact with structured data through natural language, including NL2SQL.</p>
+            <p>Exploring systems that allow users to interact with structured data through natural language, including natural-language-to-SQL (NL2SQL) interfaces.</p>
           </article>
           <article class="direction-card">
             <h4>AI + Database Systems</h4>
-            <p>Interest in how language models can be integrated into data-management systems while addressing reliability, efficiency, and correctness.</p>
+            <p>Exploring how language models can be integrated into data-management systems while addressing challenges in reliability, efficiency, and correctness.</p>
           </article>
           <article class="direction-card">
             <h4>Reliable Intelligent Systems</h4>
-            <p>Understanding how increasingly complex AI-driven systems can remain predictable, interpretable, and dependable.</p>
+            <p>Investigating how AI-driven systems can remain reliable, predictable, and dependable as their complexity and autonomy increase.</p>
           </article>
         </div>
 
-        <h3 class="subsection-title">Publications &amp; Research Outputs</h3>
+        <h3 class="subsection-title">Research Outputs</h3>
         <div class="outputs">
           <div class="output-item">
-            <h4>Research projects</h4>
+            <h4>Research Projects</h4>
             <ul>
               <li>Livelock Detection Using Cycle Decomposition in a Model Checker</li>
               <li>McMini model-checker contributions</li>
@@ -197,10 +180,9 @@
           <div class="output-item">
             <h4>Links</h4>
             <ul>
-              <li>McMini: <a href="https://github.com/mcminickpt/mcmini" target="_blank" rel="noopener">github.com/mcminickpt/mcmini</a></li>
-              <li>My GitHub: <a href="https://github.com/harshitaleela" target="_blank" rel="noopener">github.com/harshitaleela</a></li>
+              <li>McMini repository: <a href="https://github.com/mcminickpt/mcmini" target="_blank" rel="noopener">github.com/mcminickpt/mcmini</a></li>
+              <li>Personal GitHub: <a href="https://github.com/harshitaleela" target="_blank" rel="noopener">github.com/harshitaleela</a></li>
             </ul>
-            <p class="muted">New publications will be added here as they become available.</p>
           </div>
         </div>
       </div>
@@ -214,43 +196,28 @@
             <div class="tl-year">2022&ndash;2025</div>
             <div class="tl-body">
               <h3>Robotics &amp; Embedded Systems</h3>
-              <ul>
-                <li>Autonomous robotics</li>
-                <li>Embedded controllers</li>
-                <li>Path planning</li>
-                <li>Computer vision</li>
-              </ul>
+              <p>Autonomous robotics, embedded controllers, computer vision, and path planning.</p>
             </div>
           </li>
           <li class="tl-item">
             <div class="tl-year">2023</div>
             <div class="tl-body">
               <h3>DRDO</h3>
-              <ul>
-                <li>RF communication</li>
-                <li>Remote sensor monitoring</li>
-                <li>Reliability under noisy communication conditions</li>
-              </ul>
+              <p>RF communication, remote sensing, wireless reliability, and low-power hardware.</p>
             </div>
           </li>
           <li class="tl-item">
             <div class="tl-year">2024&ndash;2026</div>
             <div class="tl-body">
               <h3>Concurrency &amp; Model Checking</h3>
-              <ul>
-                <li>McMini</li>
-                <li>Livelock detection</li>
-                <li>Formal verification</li>
-                <li>LLVM instrumentation</li>
-                <li>Systems programming</li>
-              </ul>
+              <p>McMini, livelock detection, formal verification, LLVM instrumentation, and systems programming.</p>
             </div>
           </li>
           <li class="tl-item">
             <div class="tl-year">2026&ndash;Present</div>
             <div class="tl-body">
               <h3>Ph.D. &mdash; University of Utah</h3>
-              <p>Developing research interests in systems, databases, AI, and reliability.</p>
+              <p>Exploring reliable and intelligent data systems at the intersection of systems, databases, and AI.</p>
             </div>
           </li>
         </ol>
@@ -259,14 +226,14 @@
 
     <section id="projects" class="section alt" aria-label="Selected projects">
       <div class="container">
-        <h2 class="section-title">Selected Projects</h2>
+        <h2 class="section-title">Selected Systems &amp; Robotics Projects</h2>
 
         <div class="featured-grid">
           <article class="project-card">
             <h3>Autonomous Damage Control &amp; Monitoring</h3>
             <p class="muted">E-Yantra Robotics Competition</p>
+            <p>Developed a disaster-response robot designed to deliver essential utilities in simulated emergency environments.</p>
             <ul>
-              <li>Disaster-response robot delivering essential utilities</li>
               <li>Neural-network-based damage classification</li>
               <li>Priority-based path planning</li>
               <li>Wireless control and real-time location tracking</li>
@@ -278,20 +245,21 @@
             <h3>Transparent Checkpointing</h3>
             <p class="muted">Systems programming in C</p>
             <ul>
-              <li>SIGUSR2-based checkpoint and recovery</li>
-              <li>Process restart from saved checkpoint on incorrect termination</li>
-              <li>Checkpoint/restart behavior</li>
+              <li>Implemented signal-triggered checkpoint creation and recovery.</li>
+              <li>Developed process restart from saved checkpoint state after abnormal termination.</li>
+              <li>Investigated checkpoint/restart behavior in systems programs.</li>
             </ul>
             <p class="tags"><span class="tag">C</span><span class="tag">Systems Programming</span></p>
           </article>
 
           <article class="project-card">
-            <h3>Two-Link Robotic Arm</h3>
+            <h3>Two-Link Robotic Arm for Physical Tic-Tac-Toe</h3>
             <p class="muted">5&times;5 tic-tac-toe against a human</p>
+            <p>Developed a two-link robotic arm capable of playing 5&times;5 tic-tac-toe against a human opponent.</p>
             <ul>
               <li>Kinematics and computer vision</li>
               <li>Minimax with alpha-beta pruning</li>
-              <li>Magnetic gripper for checkers</li>
+              <li>Magnetic gripper for piece manipulation</li>
             </ul>
             <p class="tags"><span class="tag">Robotics</span><span class="tag">Kinematics</span><span class="tag">Computer Vision</span></p>
           </article>
@@ -317,8 +285,8 @@
             <p class="muted">Jodhpur &middot; 2023</p>
           </header>
           <p>
-            Worked on reliable RF-based communication between sensor nodes for remote temperature
-            monitoring.
+            Worked on RF-based communication between sensor nodes for remote temperature monitoring,
+            with a focus on communication reliability under noisy conditions.
           </p>
           <ul class="research-points">
             <li>Built a wireless communication link between two sensor nodes.</li>
@@ -338,6 +306,7 @@
           <div class="edu-body">
             <h3>Ph.D. in Computer Science</h3>
             <p class="muted">University of Utah, School of Computing &mdash; 2026&ndash;Present</p>
+            <p class="muted">Ph.D. Advisor: Prof. Fuheng Zhao</p>
           </div>
         </div>
         <div class="edu-card">
@@ -363,7 +332,7 @@
           </div>
           <div class="skill-group">
             <h3>AI &amp; Data</h3>
-            <p>Python, deep learning, SQL, databases</p>
+            <p>Python, SQL, deep learning, database systems</p>
           </div>
           <div class="skill-group">
             <h3>Robotics &amp; Hardware</h3>
@@ -395,7 +364,7 @@
             <p class="muted">MBM University &middot; 2022&ndash;2025</p>
           </header>
           <p class="stat">500+</p>
-          <p>Students mentored through robotics workshops covering sensor integration, PID control, and path-planning algorithms.</p>
+          <p>Students mentored through three robotics workshops covering sensor integration, PID control, and path-planning algorithms.</p>
         </article>
         <article class="leadership-item">
           <header class="research-head">
@@ -420,21 +389,21 @@
         <div class="about-grid">
           <div>
             <p>
-              I am a Ph.D. student in Computer Science at the University of Utah. My broader interests
-              lie at the intersection of computer systems, databases, artificial intelligence, and
-              software reliability.
+              I am a Ph.D. student in Computer Science at the University of Utah. My path into
+              computing began with a B.E. in Electronics and Computer Engineering at MBM University,
+              Jodhpur, where I started with robotics, embedded systems, and hands-on engineering.
             </p>
             <p>
-              My research experience includes concurrent-program verification and model checking.
-              Before graduate school, I worked with Prof. Gene Cooperman at Northeastern University on
-              McMini, an open-source DPOR-based model checker for multithreaded programs. My work
-              included livelock detection, LLVM-based instrumentation, and systems-level development.
+              Over time my interests moved from physical systems toward software systems and the
+              challenge of making concurrent programs behave correctly. This direction took me to
+              research with Prof. Gene Cooperman and Aayushi Gautam at Northeastern University on
+              McMini and livelock detection, where I worked on model checking, LLVM instrumentation,
+              and systems-level development.
             </p>
             <p>
-              My earlier work in robotics, embedded systems, and wireless communication gave me a
-              hands-on perspective on building systems under real-world constraints. I am interested
-              in carrying this systems perspective into research on reliable and intelligent data and
-              AI systems.
+              During my Ph.D., I am beginning to explore reliable data and AI systems — carrying
+              forward the systems-and-correctness perspective I developed through concurrency and
+              model checking.
             </p>
           </div>
           <div>
@@ -455,8 +424,8 @@
       <div class="container">
         <h2 class="section-title">Get in Touch</h2>
         <p>
-          I am always happy to discuss systems, verification, databases, AI, robotics, or research
-          collaborations.
+          I am always happy to discuss reliable systems, model checking, data systems, AI, robotics,
+          or potential research collaborations.
         </p>
         <ul class="contact-list">
           <li>Email: <a href="mailto:harshitaleela@gmail.com">harshitaleela@gmail.com</a></li>
