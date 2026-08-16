@@ -413,6 +413,27 @@
           toggle.setAttribute('aria-expanded', 'false');
         });
       });
+
+      var lastY = window.pageYOffset || 0;
+      var ticking = false;
+      function updateNav() {
+        var y = window.pageYOffset || 0;
+        var scrollingDown = y > lastY;
+        var open = nav.classList.contains('nav-open');
+        if (y > 120 && scrollingDown && !open) {
+          nav.classList.add('nav-hidden');
+        } else {
+          nav.classList.remove('nav-hidden');
+        }
+        lastY = y;
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(updateNav);
+          ticking = true;
+        }
+      }, { passive: true });
     })();
   </script>
 </body>
